@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop</title>
+  <meta charset="utf-8">
+  <style>
+
+    .square {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    #element-red { background-color: red; top: 50px; left: 30px; }
+    #element-gray { background-color: gray; top: 50px; left: 100px; }
+    #element-yellow { background-color: yellow; top: 50px; left: 170px; }
+
+
+    .drop-area {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      border-width: 3px;
+      border-style: solid;
+      cursor: pointer;
+    }
+
+    #area-red { border-color: red; top: 120px; left: 10px; }
+    #area-gray { border-color: gray; top: 120px; left: 100px; }
+    #area-yellow { border-color: yellow; top: 120px; left: 190px; }
+  </style>
+</head>
+<body>
+  <div class="square" id="element-red" draggable="true" ondragstart="drag(event)"></div>
+  <div class="square" id="element-gray" draggable="true" ondragstart="drag(event)"></div>
+  <div class="square" id="element-yellow" draggable="true" ondragstart="drag(event)"></div>
+
+  <div class="drop-area" id="area-red" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="drop-area" id="area-gray" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="drop-area" id="area-yellow" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
